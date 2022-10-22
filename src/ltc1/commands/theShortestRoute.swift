@@ -10,6 +10,8 @@ Tip:
 Want to change your character? Press on Byte to choose a new look.
 */
 
+// ORIGINAL SUCCESSFUL COMPLETION (SEP 2021):
+
 moveForward()
 moveForward()
 moveForward()
@@ -18,4 +20,17 @@ moveForward()
 moveForward()
 moveForward()
 moveForward()
+toggleSwitch()
+
+// REVISED SOLUTION (OCT 2022):
+
+func moveForwardSpecific(n: Int) {
+    for i in 1...n {
+        moveForward()
+    }
+}
+
+moveForwardSpecific(n: 3)
+collectGem()
+moveForwardSpecific(n: 4)
 toggleSwitch()
