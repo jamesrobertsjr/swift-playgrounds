@@ -9,6 +9,8 @@ the portal, and collect the gem.
 Don't worry if you don't get it right the first time. This is your chance to experiment.
 */
 
+// ORIGINAL SUCCESSFUL COMPLETION (SEP 2021):
+
 moveForward()
 moveForward()
 moveForward()
@@ -21,4 +23,21 @@ moveForward()
 turnLeft()
 moveForward()
 moveForward()
+collectGem()
+
+// REVISED SOLUTION (OCT 2022):
+
+func moveForwardSpecific(n: Int) {
+    for i in 1...n {
+        moveForward()
+    }
+}
+
+moveForwardSpecific(n: 3)
+turnLeft()
+moveForwardSpecific(n: 2)
+toggleSwitch()
+moveForwardSpecific(n: 2)
+turnLeft()
+moveForwardSpecific(n: 2)
 collectGem()
