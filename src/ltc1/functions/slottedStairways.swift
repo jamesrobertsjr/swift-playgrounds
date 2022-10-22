@@ -38,7 +38,7 @@ moveForward()
 turnLeft()
 solveRow()
 
-// REVISED SOLUTION (OCT 2022)
+// REVISED SOLUTION (OCT 2022) (can't fit in boxes in Swift Playgrounds):
 
 func moveForwardSpecific(n: Int) {
     for i in 1...n {
