@@ -12,6 +12,8 @@ worry if you end up trying many times. Making mistakes is actually one of the be
 remember it for a long time!
 */
 
+// ORIGINAL SUCCESSFUL COMPLETION (SEP 2021):
+
 moveForward()
 turnLeft()
 moveForward()
@@ -21,4 +23,19 @@ moveForward()
 moveForward()
 moveForward()
 moveForward()
+collectGem()
+
+// REVISED SOLUTION (OCT 2022):
+
+func moveForwardSpecific(n: Int) {
+    for i in 1...n {
+        moveForward()
+    }
+}
+
+moveForward()
+turnLeft()
+moveForwardSpecific(n: 2)
+toggleSwitch()
+moveForwardSpecific(n: 4)
 collectGem()
