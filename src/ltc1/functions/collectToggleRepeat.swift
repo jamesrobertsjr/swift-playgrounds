@@ -8,6 +8,8 @@ You can name your function anything you like in this challenge. After you've nam
 by entering its name, just like you've done with all the other functions you've used.
 */
 
+// INITIAL SUCCESSFUL COMPLETION (SEP 2021)
+
 func moveCollectToggle() {
     moveForward()
     collectGem()

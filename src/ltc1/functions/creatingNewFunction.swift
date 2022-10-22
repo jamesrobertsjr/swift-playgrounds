@@ -14,7 +14,7 @@ To define a function, enter a set of commands between the { and } curly braces t
 3. Beneath the function, use existing commands along with turnRight() to toggle open the closed switch.
 */
 
-// INITIAL SUCCESSFUL COMPLETION (2021):
+// INITIAL SUCCESSFUL COMPLETION (SEP 2021):
 
 func turnRight() {
     turnLeft()
@@ -35,7 +35,7 @@ turnLeft()
 moveForward()
 toggleSwitch()
 
-// REVISED SOLUTION (10/21/2022):
+// REVISED SOLUTION (OCT 2022):
 
 func turnRight() {
     for i in 1...3 {

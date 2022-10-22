@@ -8,9 +8,24 @@ from the previous puzzle as well as a new command: `turnLeft()`.
 3. Run your code.
 */
 
+// ORIGINAL SUCCESSFUL COMPLETION (SEP 2021)
+
 moveForward()
 moveForward()
 turnLeft()
 moveForward()
 moveForward()
+collectGem()
+
+// REVISED SOLUTION (OCT 2022)
+
+func moveForwardSpecific(n: Int) {
+    for i in 1...n {
+        moveForward()
+    }
+}
+
+moveForwardSpecific(n: 2)
+turnLeft()
+moveForwardSpecific(n: 2)
 collectGem()

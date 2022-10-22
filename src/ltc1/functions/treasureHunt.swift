@@ -15,7 +15,7 @@ As you find more complex parts of the puzzle, define a new function that reuses 
 both functions to solve the puzzle.
 */
 
-// INITIAL SUCCESSFUL COMPLETION (2021):
+// INITIAL SUCCESSFUL COMPLETION (SEP 2021):
 
 func moveForward2() {
     moveForward()
@@ -56,7 +56,40 @@ move2ThenToggle2()
 moveForward4()
 move2ThenToggle2()
 
-// REVISED SOLUTION (10/21/2022):
+// REVISED SOLUTION (OCT 2022):
+
+// func moveForwardSpecific(n: Int) {
+//     for i in 1...n {
+//         moveForward()
+//     }
+// }
+
+// func turnAround() {
+//     for i in 1...2 {
+//         turnLeft()
+//     }
+// }
+
+// func move2ThenToggle(x: Int, y: Int) {
+//     for i in 1...x {
+//         moveForwardSpecific(n: 2)
+//         toggleSwitch()
+//     }
+//     turnAround()
+//     moveForwardSpecific(n: y)
+// }
+
+// for i in 1...2 {
+//     move2ThenToggle(x: 1, y: 2)
+// }
+
+// turnRight()
+
+// for i in 1...2 {
+//     move2ThenToggle(x: 2, y: 4)
+// }
+
+// ----
 
 func moveForwardSpecific(n: Int) {
     for i in 1...n {
@@ -70,21 +103,20 @@ func turnAround() {
     }
 }
 
-func move2ThenToggle(x: Int, y: Int) {
-    for i in 1...x {
-        moveForwardSpecific(n: 2)
-        toggleSwitch()
-    }
-    turnAround()
-    moveForwardSpecific(n: y)
-}
-
 for i in 1...2 {
-    move2ThenToggle(x: 1, y: 2)
+    moveForwardSpecific(n: 2)
+    toggleSwitch()
+    turnAround()
+    moveForwardSpecific(n: 2)
 }
 
 turnRight()
 
 for i in 1...2 {
-    move2ThenToggle(x: 2, y: 4)
+    for i in 1...2 {
+        moveForwardSpecific(n: 2)
+        toggleSwitch()
+    }
+    turnAround()
+    moveForwardSpecific(n: 4)
 }

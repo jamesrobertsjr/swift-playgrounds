@@ -11,7 +11,7 @@ called composition.
 3. Enter the commands to collect the gem.
 */
 
-// INITIAL SUCCESSFUL COMPLETION (2021):
+// INITIAL SUCCESSFUL COMPLETION (SEP 2021):
 
 func turnRight() {
     turnLeft()
@@ -30,12 +30,12 @@ turnRight()
 moveForward3()
 collectGem()
 
-// REVISED SOLUTION (10/21/2022):
+// REVISED SOLUTION (OCT 2022):
 
 func turnRight() {
-    turnLeft()
-    turnLeft()
-    turnLeft()
+    for i in 1...3 {
+        turnLeft()
+    }
 }
 
 func moveForwardSpecific(n: Int) {

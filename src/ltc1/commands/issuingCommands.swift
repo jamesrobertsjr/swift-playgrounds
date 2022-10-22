@@ -8,7 +8,20 @@ commands to move Byte to move Byte across the puzzle world to collect a gem.
 3. Press Run My Code.
 */
 
+// ORIGINAL SUCCESSFUL COMPLETION (SEP 2021):
+
 moveForward()
 moveForward()
 moveForward()
+collectGem()
+
+// REVISED SOLUTION (OCT 2022):
+
+func moveForwardSpecific(n: Int) {
+    for i in 1...n {
+        moveForward()
+    }
+}
+
+moveForwardSpecific(n: 3)
 collectGem()

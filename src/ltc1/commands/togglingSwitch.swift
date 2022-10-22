@@ -13,6 +13,8 @@ Open switches are on and show a light inner core.
 3. Run your code.
 */
 
+// ORIGINAL SUCCESSFUL COMPLETION (SEP 2021):
+
 moveForward()
 moveForward()
 turnLeft()
@@ -22,4 +24,21 @@ moveForward()
 turnLeft()
 moveForward()
 moveForward()
+toggleSwitch()
+
+// REVISED SOLUTION (OCT 2022):
+
+func moveForwardSpecific(n: Int) {
+    for i in 1...n {
+        moveForward()
+    }
+}
+
+moveForwardSpecific(n: 2)
+turnLeft()
+moveForward()
+collectGem()
+moveForward()
+turnLeft()
+moveForwardSpecific(n: 2)
 toggleSwitch()
