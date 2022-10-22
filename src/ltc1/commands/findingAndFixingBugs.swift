@@ -10,8 +10,25 @@ The code below contains one or more bugs. To debug it, rearrange the commands in
 3. Drag the command to the correct location, then run the code again to test it.
 */
 
+// ORIGINAL SUCCESSFUL COMPLETION (SEP 2021):
+
 moveForward()
 moveForward()
+turnLeft()
+moveForward()
+collectGem()
+moveForward()
+toggleSwitch()
+
+// REVISED SOLUTION (OCT 2022):
+
+func moveForwardSpecific(n: Int) {
+    for i in 1...n {
+        moveForward()
+    }
+}
+
+moveForwardSpecific(n: 2)
 turnLeft()
 moveForward()
 collectGem()
