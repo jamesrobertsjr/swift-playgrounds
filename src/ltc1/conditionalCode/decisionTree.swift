@@ -85,6 +85,7 @@ func turnAround() {
 }
 
 func solveRightSide() {
+    collectGem()
     turnRight()
     moveForwardSpecific(n: 3)
     turnLeft()
@@ -98,6 +99,7 @@ func solveRightSide() {
 }
 
 func solveLeftSide() {
+    toggleSwitch()
     turnLeft()
     moveForward()
     collectGem()
@@ -106,17 +108,11 @@ func solveLeftSide() {
     turnLeft()
 }
 
-func toggleSwitchOrCollectGem() {
-    if isOnGem {
-        collectGem()
-        solveRightSide()
-    } else if isOnClosedSwitch {
-        toggleSwitch()
-        solveLeftSide()
-    }
-}
-
 for i in 1...5 {
     moveForward()
-    toggleSwitchOrCollectGem()
+    if isOnGem {
+        solveRightSide()
+    } else if isOnClosedSwitch {
+        solveLeftSide()
+    }
 }
