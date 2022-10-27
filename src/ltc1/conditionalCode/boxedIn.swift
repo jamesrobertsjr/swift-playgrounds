@@ -66,3 +66,23 @@ for i in 1 ... 2 {
 for i in 1 ... 2 {
     moveAndSwitchOrGem()
 }
+
+// ANOTHER SOLUTION (OCT 2022):
+
+func checkTile() {
+    if isOnGem {
+        collectGem()
+    } else if isOnClosedSwitch {
+        toggleSwitch()
+    }
+}
+
+for i in 1...12 {
+    if !isBlocked {
+        moveForward()
+    } else {
+        turnLeft()
+        moveForward()
+    }
+    checkTile()
+}
